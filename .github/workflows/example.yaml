@@ -6,15 +6,15 @@ jobs:
     env:
         NODE_ENV: production
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Set up Node.js 20
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js 21
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: "21"
       - name: Install dependencies
         run: npm install
       - name: Run tests
         run: npm test
       - run: echo "Building in $NODE_ENV node"   
-      - run: echo "${{ secrets.GITHUB_TOKEN}}"   
+      - run: echo "${{ secrets.GITHUB_TOKEN }}"   
