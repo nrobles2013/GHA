@@ -55,7 +55,7 @@
     "dedent": "^1.5.3",
     "deepmerge": "^4.3.1",
     "define-data-property": "^1.1.4",
-    "demo02": "^1.0.0",
+    "demo02": "file:",
     "depd": "^2.0.0",
     "destroy": "^1.2.0",
     "detect-newline": "^3.1.0",
