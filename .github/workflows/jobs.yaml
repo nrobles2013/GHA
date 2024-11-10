@@ -16,6 +16,8 @@ jobs:
         with:
          name: build-result
          path: result.txt     
-      - run: echo "::set-output name=version::v1.0"
+      - name: Set version output      
+        run: echo "version::v1.0 >> $GITHUB_OUTPUT"
+
     outputs:
-        version:  ${{ steps.build.outputs.version }}       
+        version:  ${{ steps.set-version-output.outputs.version }}       
