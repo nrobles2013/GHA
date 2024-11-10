@@ -1,0 +1,18 @@
+name: Build Multiple Environments
+
+on:
+    push:
+        branches:
+            - jobs-artifacts-outputs
+
+jobs:
+   build_node: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Build Artifact
+        run: echo "Build complet" > result.txt  
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+         name: build-result
+         path: result.txt     

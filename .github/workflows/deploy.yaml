@@ -1,43 +1,43 @@
-name: Build Multiple Environments
+#name: Build Multiple Environments
 
-on:
-    push:
-        branches:
-            - multiple
+#on:
+#    push:
+#        branches:
+#            - multiple
 
-jobs:
-   build_node: 
-    runs-on: ubuntu-latest
-    steps: 
-      - uses: actions/checkout@v4
-      - name: Sep up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-vesion: "21"
-      - run: cd node-app && npm install
-      - run: cd node-app && npm run build
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-         name: node-build
-         path: node-app/build/      
+#jobs:
+#   build_node: 
+#    runs-on: ubuntu-latest
+#    steps: 
+#      - uses: actions/checkout@v4
+#      - name: Sep up Node.js
+#        uses: actions/setup-node@v3
+#        with:
+#          node-vesion: "21"
+#      - run: cd node-app && npm install
+#      - run: cd node-app && npm run build
+#      - name: Upload Artifact
+#        uses: actions/upload-artifact@v3
+#        with:
+#         name: node-build
+#         path: node-app/build/      
 
       
-   build_go: 
-     runs-on: ubuntu-latest
-     steps: 
-        - uses: actions/checkout@v4
-        - name: Sep up Go
-          uses: actions/setup-go@v3
-          with:
-            go-version: "1.23.2"
-        - run: |
-            cd go-app
-            go mod tidy   
-        - run: mkdir -p go-app/output
-        - run: cd go-app && go build -o output/app     
-        - name: Upload Artifact
-          uses: actions/upload-artifact@v3
-          with:
-              name: go-build
-              path: go-app/build/      
+#   build_go: 
+#     runs-on: ubuntu-latest
+#     steps: 
+#        - uses: actions/checkout@v4
+#        - name: Sep up Go
+#          uses: actions/setup-go@v3
+#          with:
+#            go-version: "1.23.2"
+#        - run: |
+#            cd go-app
+#            go mod tidy   
+#        - run: mkdir -p go-app/output
+#        - run: cd go-app && go build -o output/app     
+#        - name: Upload Artifact
+#          uses: actions/upload-artifact@v3
+#          with:
+#              name: go-build
+#              path: go-app/build/      
