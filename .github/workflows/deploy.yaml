@@ -1,0 +1,24 @@
+name: Build Multiple Environments
+
+on:
+  push:
+    branches:
+      - multiple
+
+jobs:
+   build_node:
+      runs-on: ubuntu-latest
+      steps: 
+         - uses: actions/checkout@v4
+         - name: Sep up Node.js
+           uses: actions/setup-node@v3
+           with:
+             node-vesion: "21"
+         - run: npm install
+         - run: npm run build
+         - name: Upload Artifact
+           uses: actions/upload-artifact@v3
+           with:
+            name: node-build/      
+
+      

@@ -1,25 +1,25 @@
-name: CI Workflow
-on: 
-    push:
-      branches:
-        - main
-        - develop
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    env:
-        NODE_ENV: production
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+#name: CI Workflow
+#on: 
+#    push:
+#      branches:
+#        - main
+#        - develop
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    env:
+#        NODE_ENV: production
+#    steps:
+#      - name: Check out repository
+#        uses: actions/checkout@v4
 
-      - name: Set up Node.js 21
-        uses: actions/setup-node@v3
-        with:
-          node-version: '21'
+#      - name: Set up Node.js 21
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: '21'
 
-      - name: Install dependencies
-        run: npm install 
+#      - name: Install dependencies
+#        run: npm install 
 
-      - run: echo "Building in $NODE_ENV node"   
-      - run: echo "clave es ${{ secrets.AWS_ACCESS_KEY_ID }}"   
+#      - run: echo "Building in $NODE_ENV node"   
+#      - run: echo "clave es ${{ secrets.AWS_ACCESS_KEY_ID }}"   
