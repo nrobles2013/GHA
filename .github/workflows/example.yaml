@@ -13,10 +13,17 @@
 #      - name: Check out repository
 #        uses: actions/checkout@v4
 
+<<<<<<< HEAD
 #      - name: Set up Node.js 21
 #        uses: actions/setup-node@v3
 #        with:
 #          node-version: '21'
+=======
+      - name: Set up Node.js 21
+        uses: actions/setup-node@v4
+        with:
+          node-version: '21'
+>>>>>>> 5ea6902ec992a41cf428d6f3e3d178cb03b231b4
 
 #      - name: Install dependencies
 #        run: npm install 
