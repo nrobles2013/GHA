@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Build Step
         run: |
-            echo "Building ..." 
+            echo "Building......" 
             exit 1 |
       - name: Deploy Step
         if: success()
