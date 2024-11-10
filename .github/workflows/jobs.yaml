@@ -21,7 +21,7 @@ jobs:
         run: echo "version::v1.0 >> $GITHUB_OUTPUT"
 
     outputs:
-        version:  ${{ steps.set-version-output.outputs.version }}
+        version:  ${{ steps.set_version_output.outputs.version }}
         
         
    print-version:
