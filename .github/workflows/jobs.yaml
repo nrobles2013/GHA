@@ -16,3 +16,6 @@ jobs:
         with:
          name: build-result
          path: result.txt     
+      - run: echo "::set-output name=version::v1.0"
+    outputs:
+        version:  ${{ steps.build.outputs.version }}       
