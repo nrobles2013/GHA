@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "Building ..."
+        run: |
+            echo "Building ..." 
+            exit 1 |
       - name: Deploy Step
         if: success()
-        run: echo "Deploying"             
+        run: echo "Deployment step only if Build was successfull"             
