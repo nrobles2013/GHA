@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "jest"
     },
     "keywords": [],
     "author": "",
@@ -12,6 +12,9 @@
     "dependencies": {
       "demo02": "file:",
       "express": "^4.21.1"
-    }
+    },
+    "devDependencies": {
+    "jest": "^29.0.0"
+  }
   }
   
