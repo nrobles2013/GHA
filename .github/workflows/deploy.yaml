@@ -1,9 +1,9 @@
 name: Build Multiple Environments
 
 on:
-  push:
-    branches:
-      - multiple
+    push:
+        branches:
+            - multiple
 
 jobs:
    build_node:
