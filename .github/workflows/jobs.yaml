@@ -16,7 +16,8 @@ jobs:
         with:
          name: build-result
          path: result.txt     
-      - name: Set version output      
+      - name: Set version output  
+        id: set_version_output    
         run: echo "version::v1.0 >> $GITHUB_OUTPUT"
 
     outputs:
