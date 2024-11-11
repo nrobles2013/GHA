@@ -1,0 +1,16 @@
+#name: CI Workflow
+#on: 
+#    push:
+#      branches:
+#        - main
+#        - develop
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Build Step
+#        run: echo "Building......" 
+#        continue-on-error: true     
+#      - name: Deploy Step
+#        if: failure()
+#        run: echo "Deployment step only if Build was successfull"             
