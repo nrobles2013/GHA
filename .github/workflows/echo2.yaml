@@ -1,0 +1,13 @@
+name: CI Workflow
+on: 
+    push:
+      branches:
+        - main
+        - develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        uses: nrobles2013/greetings-action@v1.0.0
+
