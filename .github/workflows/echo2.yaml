@@ -2,7 +2,7 @@ name: CI Workflow
 on: 
     push:
       branches:
-       - greeting-call
+       - develop
 jobs:
   build:
     runs-on: ubuntu-latest
