@@ -19,7 +19,7 @@ resource "aws_s3_bucket_versioning" "versioning_bucket_terraform" {
 }
 
 resource "aws_s3_bucket" "log_bucket" {
-  bucket = "log-bucket"
+  bucket = "log-bucketyul"
   tags = {
         Name = "LogBucket_terraform"
         Environment = "development"
