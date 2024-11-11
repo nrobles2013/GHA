@@ -33,7 +33,7 @@ resource "aws_s3_bucket_logging" "bucket_logging" {
 }
 
 resource "aws_s3_bucket_public_access_block" "block_public_access" {
-    bucket = aws_s3_bucket.example.id
+    bucket = aws_s3_bucket.master_bucket.id
 
     block_public_acls = true
     block_public_policy = true
