@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Greeting
-        uses: nrobles2013/greetings-action@v1.0.0
+        uses: nrobles2013/greetings-action@v2.0.0
 
