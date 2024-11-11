@@ -3,7 +3,7 @@ provider "aws"{
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-example-bucketYUL"
+  bucket = "my-example-bucketyul"
     tags = {
         Name = "My bucket_yul1"
         Environment = "Dev"
